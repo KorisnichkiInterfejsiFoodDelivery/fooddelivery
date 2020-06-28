@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FoodDelivery';
+
+  showRestorani = true;
+
+  toggleRestorani(){
+    this.showRestorani = !this.showRestorani;
+  }
 }

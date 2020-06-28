@@ -1,0 +1,93 @@
+<div *ngFor="let restoran of Restorani" class="customCard">
+  <h2  (click)="showMenu(restoran)">{{ restoran.name }}</h2>
+  <div *ngIf="restoran.show" class="body">
+    <div *ngFor="let hrana of restoran.menu" class="food">
+        <p data-toggle="modal" [attr.data-target]="'#'+hrana.bukva" class="text-left">{{ hrana.name }} <span class="float-right">{{hrana.cena}} den.</span></p>
+
+        <!-- Modal -->
+        <div id={{hrana.bukva}} class="modal fade" role="dialog" >
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <!-- <div class="modal-header">
+                <h4 class="modal-title">{{restoran.name | uppercase}}</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div> -->
+              <div class="modal-body">
+                <div class="container cnt">
+                  <div class="row text-center">
+                    <div class="col-md-12">
+                      <h4 class="mb-4 hrana-header">{{hrana.name}}</h4>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-12">
+                      <p>Цената изнесува {{hrana.cena}} ден.</p>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col-md-12">
+                     <p>Време на достава - {{ restoran.vreme}} мин.</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control" placeholder="First Name" autocomplete="none">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control" placeholder="Last Name" autocomplete="none">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Email" autocomplete="none">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Address" autocomplete="none">
+                        </div>
+                        <div class="form-row" *ngIf="creditcard">
+                          <div class="col-md-12">
+                            <h6 class="text-left">Credit Card Info</h6>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control"  placeholder="Name on Card" autocomplete="none">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <input type="text" class="form-control"  placeholder="Card Number" autocomplete="none">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <input type="text" placeholder="MM/YY" class="form-control" autocomplete="none">
+                          </div>
+                          <div class="form-group col-md-2">
+                            <input type="text" class="form-control" placeholder="CVV" autocomplete="none">
+                          </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-12 text-left" style="padding:0;">
+                        <div class="form-group" >
+                          <div class="form-check"style="padding-left: 15px;">
+                            <button class="btn btn-outline-custom" type="checkbox" id="gridCheck" (click)="creditcard = !creditcard" *ngIf="!creditcard">
+                              Pay with Card
+                            </button>
+                            <button class="btn btn-outline-custom" type="checkbox" id="gridCheck" (click)="creditcard = !creditcard" *ngIf="creditcard">
+                              Pay with Cash
+                            </button>
+                          </div>
+                        </div><br>
+                        </div>
+                      </div>
+                        <button type="submit" class="btn btn-primary mb-3 kopche-fixed" id="checkout">Нарачај</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

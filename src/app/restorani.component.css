@@ -1,0 +1,160 @@
+.customCard .food > p{
+  padding: 5px;
+  cursor: pointer;
+}
+.customCard .food > p:hover{
+  text-shadow: 1px 1px 2px gray;
+}
+.customCard{
+  /* border: 1px solid #fff; */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background: transparent;
+  color: #fff;
+  box-shadow: 0 0 10px black;
+}
+.customCard > h2{
+    padding: 0.5rem;
+    background: rgb(29,10,0);
+    /* color:black; */
+    text-shadow: 0 0 2px black;
+    background: url('../assets/daska.jpg') no-repeat center center/cover;
+    /* background: linear-gradient(180deg, rgba(29,10,0,0.99) 0%, rgba(63,29,0,0.99) 100%); */
+    margin: 0;
+    border-radius: 5px;
+}
+
+.customCard .body{
+  transition: all 1 ease-in;
+}
+.customCard .body:last-child{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.customCard .food{
+  margin: 0;
+  padding: 5px;
+}
+.customCard .food p{
+  padding: 0;
+  margin: 0;
+}
+.customCard .food{
+  background: rgba(15, 15, 15, 0.7);
+  border-top: 1px dotted lightgray;
+}
+.customCard .food:first-child{
+  border:none;
+}
+.customCard .food:last-child{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.customCard h2{
+  cursor: pointer;
+}
+
+.modal-body p{
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.modal-body #checkout{
+  background: url('../assets/button.jpg') no-repeat center center/cover;
+  border: none;
+  box-shadow: 0 0 10px black;
+}
+.modal-dialog{
+ padding:0;
+ margin:0;
+ position: relative;
+ top:0;
+ color: rgba(255, 255, 255, 0.9);
+ /* text-shadow: 0 0 2px black; */
+}
+.modal{
+  transform: translateY(-800px);
+  transition: all 0.7s ease-in-out;
+}
+.modal.fade{
+  opacity:1
+}
+.modal.show{
+  transform: translateY(0);
+}
+/* .fade-scale{
+  transition: all 0.7s linear;
+}
+.fade-scale.show{
+  transform: translateY(0);
+} */
+
+.modal-body{
+  margin: auto;
+  margin-top: 300px;
+  padding-left: 10px;
+  width:72%;
+}
+
+.modal-content{
+  background: rgb(29,10,0);
+  background: url('../assets/modal.png') no-repeat center center/cover;
+  position: relative;
+  height: 1000px;
+  width: 760px;
+  top:-133px;
+  left:50vw;
+  transform: translate(-50%);
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 5px  black;
+  /* box-shadow: 0px 0px 150px 50px black; */
+  /* border: 0.5px solid white; */
+}
+.hrana-header{
+  font-weight: bold;
+}
+.modal-content::before{
+  content:'';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0,0,0,0.023144291896446068) 0%, rgba(0,0,0,0.25) 5%, rgba(0,0,0,0.25) 95%, rgba(0,0,0,0) 100%);
+}
+
+.modal-content .btn-outline-custom{
+  background:none;
+  border: 1px solid rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+  box-shadow: 0px 0px 4px black;
+}
+
+.modal-content input{
+  background: url('../assets/daska.jpg') no-repeat center center/cover;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0px 0px 10px black;
+}
+.modal-content input::placeholder{
+  color: #fff;
+  font-weight: 100;
+  font-style: italic;
+  opacity:0.8;
+}
+
+.modal-content .btn-outline-custom:hover{
+  /* background-color: rgba(139,0,0,0.1);;
+  color: #fff; */
+}
+
+
+.kopche-fixed{
+  position: fixed;
+  bottom: 220px;
+  right: 140px;
+}

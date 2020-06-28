@@ -1,0 +1,21 @@
+*{
+  color: #fff;
+  box-sizing: border-box;
+}
+
+h2 img{
+  width: 150px;
+}
+
+.kopchinja{
+  width: 100px;
+  height:100px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: ease 0.5s all;
+  box-shadow: 0 0 20px 5px black;
+}
+.kopchinja:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
