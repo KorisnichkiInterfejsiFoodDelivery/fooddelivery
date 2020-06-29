@@ -33,36 +33,36 @@
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <form name="order" method="POST" data-netlify="true">
+                      <form name="order" method="POST" data-netlify="true" autocomplete="off">
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <input type="text" name="firstName" class="form-control" placeholder="First Name" autocomplete="none">
+                            <input type="text" class="form-control" placeholder="Име" autocomplete="none">
                           </div>
                           <div class="form-group col-md-6">
-                            <input type="text" name="lastName" class="form-control" placeholder="Last Name" autocomplete="off">
+                            <input type="text"class="form-control" placeholder="Презиме" autocomplete="none">
                           </div>
                         </div>
                         <div class="form-group">
-                          <input type="text" name="email" class="form-control" placeholder="Email" autocomplete="off">
+                          <input type="text" class="form-control" placeholder="Е-маил" autocomplete="none">
                         </div>
                         <div class="form-group">
-                          <input type="text" name="address" class="form-control" placeholder="Address" autocomplete="off">
+                          <input type="text" class="form-control" placeholder="Адреса на живеење" autocomplete="none">
                         </div>
                         <div class="form-row" *ngIf="creditcard">
                           <div class="col-md-12">
-                            <h6 class="text-left">Credit Card Info</h6>
+                            <h6 class="text-left">Податоци за кредитна картичка</h6>
                           </div>
                           <div class="form-group col-md-6">
-                            <input type="text" class="form-control"  placeholder="Name on Card" autocomplete="off">
+                            <input type="text" class="form-control"  placeholder="Име и презиме" autocomplete="none">
                           </div>
                           <div class="form-group col-md-6">
-                            <input type="text" class="form-control"  placeholder="Card Number" autocomplete="off">
+                            <input type="text" class="form-control"  placeholder="Број на картичка" autocomplete="none">
                           </div>
                           <div class="form-group col-md-4">
-                            <input type="text" placeholder="MM/YY" class="form-control" autocomplete="off">
+                            <input type="text" placeholder="MM/YY" class="form-control" autocomplete="none">
                           </div>
                           <div class="form-group col-md-2">
-                            <input type="text" class="form-control" placeholder="CVV" autocomplete="off">
+                            <input type="text" class="form-control" placeholder="CVV" autocomplete="none">
                           </div>
                         </div>
                         <div class="row">
